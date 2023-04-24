@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="{{ url_for('static', filename='js/main.js') }}"></script> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <title>Electricity</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        mytheme: {
+
+          "primary": "#38BDF8",
+
+          "secondary": "#818CF8",
+
+          "accent": "#F471B5",
+
+          "neutral": "#1E293B",
+
+          "base-100": "#0F172A",
+
+          "info": "#0CA5E9",
+
+          "success": "#2DD4BF",
+
+          "warning": "#F4BF50",
+
+          "error": "#FB7085",
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class='canvas'>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+    <div class='bubble'></div>
+  </div>
+  <div class="navbar bg-base-100 shadow-2xl fixed ">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          <li href="/"><a>Homepage</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <a class="btn btn-ghost normal-case text-xl">Electricity price</a>
+    </div>
+   
+  </div>
+  {% block content %}
+
+  {% endblock %}
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="w-screen h-screen  bg-base-500 ">
+    <div class="flex justify-center items-center h-full text-2xl ">
+
+
+        <div class="card w-1/2  bg-base-100 shadow-xl image-full">
+            <figure><img src="{{ url_for('static', filename='elec.jpeg') }}" alt="Shoes" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">Electricity price pridiction</h2>
+                <p> We can check the bills from Electricity bill for future based on
+                    some paramenters</p>
+                <form method="post">
+                    <div class="grid grid-cols-3 gap-4">
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">Day</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="9"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="day"/>
+                        </div>
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">Month</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="1"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="month"/>
+                        </div>
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">Forecast Wind Production</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="54"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="forecast"/>
+                        </div>
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">System LoadEA</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="4241"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="systemload"/>
+                        </div>
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">SMPEA</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="49"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="smpea"/>
+                        </div>
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">ORK Temperature</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="9"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="temperature"/>
+                        </div>
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">ORK Windspeed</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="14"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="windspeed"/>
+                        </div>
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">CO2 Intensity</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="491"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="co2int"/>
+                        </div>
+
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">Actual Wind Production</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="54"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm" name="actualwind"/>
+                        </div>
+
+                        <div class="form-control w-full max-w-xs">
+                            <label class="label">
+                                <span class="label-text text-white">System LoadEP2</span>
+                            </label>
+                            <input type="number" placeholder="Type here" value="4426"
+                                class="text-black input input-bordered w-32 max-w-xs input-sm text-black" name="loadsystem"/>
+                        </div>
+
+                    </div>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Predict</button>
+                    </div>
+                </form>
+                <h2 class="card-title">Your Electricity bill should be: {{ prediction }}</h2>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
